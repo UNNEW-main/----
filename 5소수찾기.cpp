@@ -23,4 +23,3 @@ int solution(int n) {
       answer++; 
   return answer;
 }
-
