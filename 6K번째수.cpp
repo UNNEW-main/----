@@ -18,4 +18,3 @@ vector<int> solution(vector<int> array, vector<vector<int>> commands) {
     }
     
     return answer;
-}
