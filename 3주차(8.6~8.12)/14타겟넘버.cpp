@@ -12,7 +12,7 @@ void dfs(vector<int>numbers, int target, int &answer, int count=0, int sum=0){
             answer++;
         return;
     }
-    
+
     dfs(numbers, target, answer, count+1, sum+numbers[count]);
     dfs(numbers,target, answer, count+1, sum-numbers[count]);
 }
