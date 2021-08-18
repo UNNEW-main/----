@@ -13,7 +13,7 @@ using namespace std;
 int solution(vector<int> priorities, int location) {
   int answer = 0;
   priority_queue<int> prio_que;
-  queue<pair<int, int>> que;
+  queue<pair<int, int> > que;
   
   for(int i=0;i<priorities.size();++i){
     prio_que.push(priorities[i]);
