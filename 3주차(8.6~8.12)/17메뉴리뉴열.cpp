@@ -28,7 +28,7 @@ vector<string> solution(vector<string> orders, vector<int> course) {
     for(int i=0;i<orders.size();++i){
       sort(orders[i].begin(), orders[i].end());
       if(course[j] > orders[i].length()) continue;
-      vector<int> temp;
+      vector<int> temp
       for(int k=0;k<course[j];++k)
         temp.push_back(1);
       for(int k=course[j];k<orders[i].length();++k)
