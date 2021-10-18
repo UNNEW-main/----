@@ -19,7 +19,6 @@ int solution(int n, vector<int> stations, int w)
       i+=(2*w +1);
       answer++;
     }
-    
   }
   
   return answer;
