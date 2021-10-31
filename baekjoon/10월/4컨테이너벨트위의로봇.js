@@ -1,15 +1,11 @@
 //https://www.acmicpc.net/problem/20055
-/* 
-3 2
-1 2 1 2 1 2 
-*/
 
 let input = require('fs').readFileSync('/dev/stdin').toString().split('\n');
 
 let [N, K] = input[0].split(' ').map(Number);
 
 let valt = input[1].split(' ').map(Number); //벨트 내구도
-let robot = []; //
+let robot = []; //로봇의 위치
 let start = 0,
   end = N - 1;
 let answer = 0;
