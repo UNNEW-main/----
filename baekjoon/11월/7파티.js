@@ -1,19 +1,18 @@
+//https://www.acmicpc.net/status?user_id=startori9388&problem_id=1238&from_mine=1
+//다익스트라...
+
 let input = require('fs').readFileSync('/dev/stdin').toString().split('\n');
-let visit = [];
-let dist = [];
+let visit = []; //방문했는지.
+let dist = []; //거리에 대한 최솟값Í
 let MAX = Number.MAX_SAFE_INTEGER;
 let [N, M, X] = input[0].split(' ').map(Number);
 X -= 1;
 let road = Array.from(Array(N), () => Array(N).fill(MAX));
-
 let result = Array.from(Array(N), () => 0);
 
 for (let i = 1; i <= M; ++i) {
-  let temp = input[i].split(' ');
-  let start = parseInt(temp[0]);
-  let end = parseInt(temp[1]);
-  let distance = parseInt(temp[2]);
-  road[start - 1][end - 1] = distance;
+  let temp = input[i].split(' ').map(Number);
+  road[temp[0] - 1][temp[1] - 1] = temp[2];
 }
 
 //1. 시작노드에서 연결된 노드의 거리를 dist에 입력
@@ -31,7 +30,7 @@ for (let i = 0; i < N; ++i) {
     result[i] += dist[X];
   }
 }
-console.log(Math.max(...result));
+console.log(Math.max(...result)); //결과
 
 function dijkstra(start) {
   for (let i = 0; i < N; ++i) {
@@ -50,6 +49,7 @@ function dijkstra(start) {
     }
   }
 }
+//dist중에 가장 적은 값 찾는 함수
 function find_Shortest_Node() {
   let temp = MAX;
   let index;
