@@ -1,6 +1,6 @@
 //https://www.acmicpc.net/problem/2631
 //LIS
-let input = require('fs').readFileSync('baekjoon/test.txt').toString().split('\n');
+let input = require('fs').readFileSync('/dev/stdin').toString().split('\n');
 
 let count = input[0]; //맨 앞 입력값, 몇개를 입력받을 거냐
 let numbers = []; //input값을 받을 변수
@@ -13,7 +13,7 @@ for (let i = 0; i < numbers.length; ++i) {
   LIS[i] = 1;
   for (let j = 0; j < i; ++j) {
     if (numbers[j] < numbers[i] && LIS[j] + 1 > LIS[i]) {
-      //i의 값이 과거의 값들보다 크고
+      //
       LIS[i] = LIS[j] + 1;
     }
   }
@@ -21,4 +21,3 @@ for (let i = 0; i < numbers.length; ++i) {
 let max = 0;
 for (let i = 0; i < numbers.length; i++) max = Math.max(max, LIS[i]);
 console.log(numbers.length - max);
-console.log(LIS);
