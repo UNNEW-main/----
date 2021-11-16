@@ -14,10 +14,10 @@ for (let i = 1; i < input.length; i++) {
   }
 }
 
-let result = dps(0, 0);
+let result = dfs(0, 0);
 console.log(result);
 
-function dps(x, y) {
+function dfs(x, y) {
   if (x === size[1] - 1 && y === size[0] - 1) return 1;
   if (v[y][x] !== -1) return v[y][x];
   v[y][x] = 0;
@@ -25,7 +25,7 @@ function dps(x, y) {
     let nextX = x + xx[i];
     let nextY = y + yy[i];
     if (nextX >= 0 && nextY >= 0 && nextX < size[1] && nextY < size[0] && rooms[y][x] > rooms[nextY][nextX]) {
-      v[y][x] += dps(nextX, nextY);
+      v[y][x] += dfs(nextX, nextY);
     }
   }
   return v[y][x];
