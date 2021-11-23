@@ -1,3 +1,7 @@
+//https://www.acmicpc.net/problem/2565
+//LIS 응용...
+//trim()의 중요성
+
 let input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
 let [count, ...lines] = input;
 count = Number(count);
