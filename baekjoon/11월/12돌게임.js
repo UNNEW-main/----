@@ -1,3 +1,5 @@
+//https://www.acmicpc.net/problem/9655
+//너무 쉬워버린...
 let input = require('fs').readFileSync('/dev/stdin').toString().trim();
 
 let num = Number(input);
