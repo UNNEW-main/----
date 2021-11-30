@@ -1,3 +1,6 @@
+//https://www.acmicpc.net/problem/9095
+//피보나치...?
+
 let input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
 
 let [n, ...targets] = input;
