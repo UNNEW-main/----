@@ -1,3 +1,6 @@
+//https://www.acmicpc.net/problem/2447
+//뭔가 단순히 어려웠음
+
 let input = require('fs').readFileSync('/dev/stdin').toString();
 let result = '';
 for (let i = 0; i < input; ++i) {
