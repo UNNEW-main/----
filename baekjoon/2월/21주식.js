@@ -1,3 +1,6 @@
+//https://www.acmicpc.net/problem/11501
+//실패
+//시간없어서 더이상은 못품....
 let input = require('fs').readFileSync('baekjoon/test.txt').toString().trim().split('\n');
 
 let [count, ...numbers] = input;
