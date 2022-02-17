@@ -1,3 +1,6 @@
+// https://www.acmicpc.net/problem/2839
+//무난하게 풀수 있었음
+
 let input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
 
 let number = Number(input);
