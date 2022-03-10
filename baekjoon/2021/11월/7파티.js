@@ -1,4 +1,4 @@
-//https://www.acmicpc.net/status?user_id=startori9388&problem_id=1238&from_mine=1
+// https://www.acmicpc.net/problem/1238
 //다익스트라...
 
 let input = require('fs').readFileSync('/dev/stdin').toString().split('\n');

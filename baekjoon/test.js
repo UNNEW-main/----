@@ -1,21 +1,15 @@
-let input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
+let input = require('fs').readFileSync('baekjoon/test.txt').toString().trim().split('\n');
 
-let number = Number(input);
+let [count, costs, ...ways] = input;
+costs = costs.split(' ').map(Number);
 
+console.log(count);
+console.log(costs);
+console.log(ways);
 let result = 0;
+let 전체도시 = Array.from(Array(Number(count)), () => 0);
+// [0,0,0,0,0]
 
-boxing(number, 0);
+console.log(costs.indexOf(Math.min(...costs)));
 
-if (!result) result = -1;
-console.log(result);
-
-function boxing(nowNum, tempResult) {
-  tempResult += 1;
-
-  if (result < tempResult) {
-    if (nowNum - 5 > 0) boxing(nowNum - 5, tempResult);
-    if (nowNum - 3 > 0) boxing(nowNum - 3, tempResult);
-    if (nowNum - 5 === 0 && result <= tempResult) return (result = tempResult);
-    if (nowNum - 3 === 0 && result <= tempResult) return (result = tempResult);
-  }
-}
+function gogogo(시작점index, 이동한도시들index) {}

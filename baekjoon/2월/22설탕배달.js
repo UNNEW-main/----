@@ -18,7 +18,7 @@ function boxing(nowNum, tempResult) {
   if (result < tempResult) {
     if (nowNum - 5 > 0) boxing(nowNum - 5, tempResult);
     if (nowNum - 3 > 0) boxing(nowNum - 3, tempResult);
-    if (nowNum - 5 === 0 && result <= tempResult) return (result = tempResult);
-    if (nowNum - 3 === 0 && result <= tempResult) return (result = tempResult);
+    if (nowNum - 5 === 0) return (result = tempResult);
+    if (nowNum - 3 === 0) return (result = tempResult);
   }
 }
