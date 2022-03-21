@@ -1,3 +1,6 @@
+//https://www.acmicpc.net/problem/1153
+//골드바흐의 추측....
+
 let input = require('fs').readFileSync('/dev/stdin').toString().trim().split(' ');
 
 let num = Number(input);
