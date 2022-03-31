@@ -1,3 +1,6 @@
+//https://www.acmicpc.net/problem/2941
+//뭔가 야매로 푼 느낌...
+
 let input = require('fs').readFileSync('/dev/stdin').toString().trim();
 
 let result = 0;
